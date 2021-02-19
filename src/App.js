@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
-
+import Navbar from "./components/Navbar"
+import "./App.css";
+import BannerPosts from './components/BannerPosts'
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React/Django
-        </a>
-      </header>
+      <Navbar />
+
+      {/* Add image here  start*/}
+      <div className="bannerImg">
+      <img  id="banner" src="https://www.sreenidhi.edu.in/assets/images/sreenidhi-banner1.jpg" alt="oops" width="100%" />
+      </div>
+      {/* Add image here  end*/}
+
+
+
+      <BannerPosts />
+
     </div>
   );
 }
