@@ -1,23 +1,23 @@
 import Navbar from "./components/Navbar"
 import "./App.css";
 import BannerPosts from './components/BannerPosts'
+import RoutesH from "./Routes"
+import {BrowserRouter as Router ,Switch,Route,Link} from "react-router-dom"
+import HomePage from './components/HomePage'
+import Posts from './components/Posts'
+import Markdown from "./components/Markdown"
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-
-      {/* Add image here  start*/}
-      <div className="bannerImg">
-      <img  id="banner" src="https://www.sreenidhi.edu.in/assets/images/sreenidhi-banner1.jpg" alt="oops" width="100%" />
+    <Router>
+      <div className="App">
+        <Navbar />
+        <Route exact path="/" component={HomePage}/>
+        <Route exact path="/posts" component={Posts}/>
+        <Route exact path="/post" component={Markdown}/>
+        
       </div>
-      {/* Add image here  end*/}
-
-
-
-      <BannerPosts />
-
-    </div>
-  );
+    </Router>
+    );
 }
 
 export default App;

@@ -14,7 +14,7 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
-
+import {Link} from 'react-router-dom'
 const useStyles = makeStyles((theme) => ({
   grow: {
     flexGrow: 1,
@@ -151,14 +151,7 @@ export default function PrimarySearchAppBar() {
     <div className={classes.grow}>
       <AppBar position="static">
         <Toolbar>
-          <IconButton
-            edge="start"
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="open drawer"
-          >
-            <MenuIcon />
-          </IconButton>
+         
           <Typography className={classes.title} variant="h6" noWrap>
             Alumni portal
           </Typography>
@@ -175,8 +168,13 @@ export default function PrimarySearchAppBar() {
               inputProps={{ 'aria-label': 'search' }}
             />
           </div>
+          
+          <Link to="/post" style={{color:"white",fontSize:"1.3em",textDecoration:"none"}}>post</Link> 
+          &nbsp;&nbsp;
+          <Link to="/posts" style={{color:"white",fontSize:"1.3em",textDecoration:"none",marginLeft:"30%"}}> feed</Link>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
+            
            
             <IconButton
               edge="end"
@@ -189,6 +187,7 @@ export default function PrimarySearchAppBar() {
               <AccountCircle />
             </IconButton>
           </div>
+         
           <div className={classes.sectionMobile}>
             <IconButton
               aria-label="show more"

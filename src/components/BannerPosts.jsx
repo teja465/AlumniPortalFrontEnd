@@ -12,6 +12,10 @@ import "./BannerPosts"
                setlst(l)
            })
 
+        }).catch((err)=>{
+            alert("error while fetching posts from database server ")
+            
+            
         })
 
      },[])
@@ -24,13 +28,12 @@ import "./BannerPosts"
 
             {lst.map((item)=>{
                 return (
-                    <div > 
-                        <div className="banner_post"  id="banner_post" style={{border:"1px solid black",margin:"20px 5px 20px 20px", maxHeight:"400px",maxWidth:"500px"}}>
+                    <div style={{border:"1px solid black",margin:"20px 5px 20px 20px", maxHeight:"400px",maxWidth:"650px",backgroundColor:"white",overflow:"auto"}} > 
+                        <div className="banner_post"  id="banner_post" >
                             <img src={item.img_url} alt="" className="bannerImg" height="200px" width="300px"/>
                             <h2>{item.title}</h2>
-                            <p>{item.body.substring(1, 420)}....</p>
+                            <p >{item.body}</p>
                         </div>
-                        {/* <h1>POST</h1> */}
                     </div>
                 )
 
