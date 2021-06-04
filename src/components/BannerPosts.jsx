@@ -15,7 +15,6 @@ import "./BannerPosts"
         }).catch((err)=>{
             alert("error while fetching posts from database server ")
             
-            
         })
 
      },[])
@@ -28,7 +27,7 @@ import "./BannerPosts"
 
             {lst.map((item)=>{
                 return (
-                    <div style={{border:"1px solid black",margin:"20px 5px 20px 20px", maxHeight:"400px",maxWidth:"650px",backgroundColor:"white",overflow:"auto"}} > 
+                    <div style={{border:"1px solid black",margin:"20px 5px 20px 20px", maxHeight:"400px",maxWidth:"550px",backgroundColor:"white",overflow:"auto"}} > 
                         <div className="banner_post"  id="banner_post" >
                             <img src={item.img_url} alt="" className="bannerImg" height="200px" width="300px"/>
                             <h2>{item.title}</h2>

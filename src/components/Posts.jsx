@@ -4,7 +4,7 @@ import Showpost from "./Showpost"
 
 export default function Posts() {
     const [posts, setposts] = useState([])
-    const url="http://127.0.0.1:8000/posts"
+    const url="http://127.0.0.1:8000/posts/"
     useEffect(()=>{
         fetch(url).then((resp)=>{
             resp.json().then((data)=>{
@@ -12,16 +12,17 @@ export default function Posts() {
             })
 
         }).catch((err)=>{
-            alert("Error while feching posts from backend sereve")
+            console.log("err in /posts",err)
+            alert("Error while feching posts from backend serever")
         })
 
     },[])
     
     
     return (
-        <div>
-            <h1>This is posts page</h1>
+        <div style={{maxWidth:"900px",margin:"auto"}}>
             {posts.length===0?"No posts to show":""}
+            {console.log(posts)}
             {posts.map((post,index)=> <Showpost post_={post} />)}
         </div>
     )

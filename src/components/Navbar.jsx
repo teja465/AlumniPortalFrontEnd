@@ -153,7 +153,7 @@ export default function PrimarySearchAppBar() {
         <Toolbar>
          
           <Typography className={classes.title} variant="h6" noWrap>
-            Alumni portal
+            <Link to="/" style={{color:"white",fontSize:"1.3em",textDecoration:"none"}}>Alumni portal</Link>
           </Typography>
           <div className={classes.search}>
             <div className={classes.searchIcon}>

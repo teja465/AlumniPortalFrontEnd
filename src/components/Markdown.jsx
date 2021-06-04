@@ -13,7 +13,7 @@ function handleOnClick(value){
 
     }).then((msg)=>{
       alert("posted addded")
-      window.location="/"
+      // window.location="/"
     })
     .catch((err)=>{
       alert("error while adding post to backend server")
@@ -24,7 +24,7 @@ function handleOnClick(value){
 
 
 export default function App() {
-  const [value, setValue] = React.useState("**saikrihna TRS!!!**");
+  const [value, setValue] = React.useState("**Hi frands !!!**");
   function handleOnChange(value){
     setValue(value)
 
